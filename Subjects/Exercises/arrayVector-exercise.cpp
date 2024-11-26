@@ -96,7 +96,7 @@ int main(){
         }
     cout <<  temp_arr[0] << temp_arr[1] << temp_arr[2] << endl;
     }
-    // 
+    
 
     return 0;
 }
