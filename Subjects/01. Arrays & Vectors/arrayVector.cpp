@@ -26,12 +26,20 @@ using namespace std;
     --------
 
     
+    ---------
+    - Compile time and Runtime
+    - Compile time: The phase where the code is compiled into machined code(1 & 0) by compiler, then
+    -it creates executable file for the operating system can run.  
+    -   Purposes: Syntax checking, type checking, error detection, linking errors...   
+    - Runtime: The phase where the compiled program is executed (the executable file is executed).
+    -   Common errors: Math problems 
+    ---------
 */
 int main(){
 
     int arr1 [5] {0,1,2,3};
     char arr2 [2] {'s', 'a'};
-    int arr3 [] {}; // prevent garbagess
+    int arr3 [] {}; // prevent garbages
 
     cout <<  arr3[0] << endl;
     
@@ -54,9 +62,7 @@ int main(){
 
 
 /*
-    understand variables
-    compile time, compiler
-    initialize list
+    why use initialize list
     how vector works behind    
-
+    using namespace
 */
