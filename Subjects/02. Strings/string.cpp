@@ -34,6 +34,16 @@ using namespace std;
     - ex: str1 = "str2" + "nguyen" (C-style string + C-style string) you can't do this.
     _
     --------
+
+
+    --------
+    - When you pass string literal(const char[]) to function has string object parameter
+    -(string str). Compiler will create temporary string object (it is called implicit 
+    - conversion) holds the text of string literal.
+    -
+    - The compiler can convert from literal to object but not from object to literal
+    --------
+
 */
 
 int main(){
