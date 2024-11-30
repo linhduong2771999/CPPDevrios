@@ -8,20 +8,21 @@ using namespace std;
 
 // interface
 void main_UI();
-void viewing_UI(const vector<vector<string>> &list_people);
-void creating_person(string &name, vector<vector<string>> &list_people);
-void updating_UI();
-void deleting_UI();
-void tuturial_UI();
+void viewing_list(const vector<vector<string>> &list_people);
+void creating_person(vector<vector<string>> &list_people);
+void updating_person(vector<vector<string>> &list_people);
+void deleting_person(vector<vector<string>> &list_people);
+void tutorial_UI();
 void support_UI();
 void softInfo_UI();
 void compInfo_UI();
 
 void clear_bufferInput();
 void display_text(const string &text, bool isEndl);
-void display_list(const vector<vector<string>> &list_people);
 void capitalize_firstLetter(string &name);
 void generate_id(string &id, const string &name, const vector<vector<string>> &list_people);
+
+vector <string>find_person(const string &id, const vector<vector<string>> &list_people);
 
 int main(){
     // vector<vector<string>> list_people = {
@@ -49,20 +50,15 @@ int main(){
         } else if(mainUI_num == 0){
             cout << "exit" << endl;
         } else if(mainUI_num == 1){
-            viewing_UI(list_people);
+            viewing_list(list_people);
         } else if(mainUI_num == 2){
-            string name = {" "};
-            display_text("------------------------------------------------------------>                           -", true);
-            display_text("- Enter name: ", false);
-            clear_bufferInput();
-            getline(cin, name);
-            creating_person(name, list_people);
+            creating_person(list_people);
         } else if(mainUI_num == 3){
-            updating_UI();
+            updating_person(list_people);
         } else if(mainUI_num == 4){
-            deleting_UI();
+            deleting_person(list_people);
         } else if(mainUI_num == 5){
-            tuturial_UI();
+            tutorial_UI();
         } else if(mainUI_num == 6){
             support_UI();
         } else if(mainUI_num == 7){
@@ -95,46 +91,125 @@ void main_UI(){
     display_text("- Type 2 for creating                                                                   -", true);
     display_text("- Type 3 for updating                                                                   -", true);
     display_text("- Type 4 for deleting                                                                   -", true);
-    display_text("- Type 5 for tutorials                                                                  -", true);
-    display_text("- Type 6 for support                                                                    -", true);
-    display_text("- Type 7 for software's info                                                            -", true);
-    display_text("- Type 8 for company's info                                                             -", true);
+    // display_text("- Type 5 for tutorials                                                                  -", true);
+    // display_text("- Type 6 for support                                                                    -", true);
+    // display_text("- Type 7 for software's info                                                            -", true);
+    // display_text("- Type 8 for company's info                                                             -", true);
 }
 
-void viewing_UI(const vector<vector<string>> &list_people){
+void viewing_list(const vector<vector<string>> &list_people){
     display_text("------------------------------------------------------------>                           -", true);
     display_text("- List of employees: ", true);
-    display_list(list_people);
+    if (list_people.size() <= 0)
+    {
+        display_text("- Your list is empty. Please create and add a person.", true);
+    } else {
+        for (size_t i = 0; i < list_people.size(); i++)
+        {
+            cout << "-     + Name: ";
+            cout << list_people.at(i).at(0);
+            cout << " (ID: ";
+            cout << list_people.at(i).at(1) << ")";
+            cout << endl;
+        }
+    }
     display_text("------------------------------------------------------------>                           -", true);
 }
-void creating_person(string &name, vector<vector<string>> &list_people){
+void creating_person(vector<vector<string>> &list_people){
     string id = {""};
+    string name = {" "};
     vector<string> person = {};
     
+    clear_bufferInput();
+    display_text("------------------------------------------------------------>                           -", true);
+    display_text("- Enter name: ", false);
+    getline(cin, name);
+
     capitalize_firstLetter(name);
     generate_id(id, name, list_people);
     person.push_back(name);
     person.push_back(id);
 
-    // if (list_people.size() <= 0)
-    // {
-    //     list_people.at(0).at(0) = " ";
-    //     list_people.at(0).at(1) = " ";
-    // }
-    
-    // for (size_t i = 0; i < list_people.size(); i++)
-    // {
-    // }
     list_people.push_back(person);
+    display_text("- Creating successfully. Press 1 to view new list", true);
 }
-void updating_UI(){
-    display_text("updating", true);
+void updating_person(vector<vector<string>> &list_people){
+    if (list_people.size() <= 0)
+    {
+        display_text("- Your list is empty. Please create and add a person.", true);
+    } else {
+        string id = {""}, newId = {""};
+        string name = {""};
+        vector <string> person = {};
+
+        clear_bufferInput();
+        display_text("------------------------------------------------------------>                           -", true);
+       
+        while (person.size() <= 0)
+        {
+            display_text("- Enter id: ", false);
+            getline(cin, id);
+            person = find_person(id, list_people);
+            if (person.size() <= 0)
+            {
+                cout << "- There are no person with id: " << id << endl;
+            }
+        }
+
+        cout << "- Old name: " << person.at(0) << " | " << "Old id: " << person.at(1) << endl;
+        display_text("- Update name: ", false);
+        getline(cin, name);
+        
+        // Update and generate new id
+        for (size_t i = 0; i < list_people.size(); i++)
+        {
+            if (id == list_people.at(i).at(1))
+            {
+                capitalize_firstLetter(name);
+                generate_id(newId, name, list_people);
+                list_people.at(i).at(0) = name;
+                list_people.at(i).at(1) = newId;
+            }
+        }
+        display_text("- Updating successfully. Press 1 to view new list", true);
+    }
 }
-void deleting_UI(){
-    display_text("deleting", true);
+void deleting_person(vector<vector<string>> &list_people){
+    if (list_people.size() <= 0)
+    {
+        display_text("- Your list is empty. Please create and add a person.", true);
+    } else {
+        string id = {""};
+        string name = {""};
+        vector <string> person = {};
+
+        clear_bufferInput();
+        display_text("------------------------------------------------------------>                           -", true);
+       
+        while (person.size() <= 0)
+        {
+            display_text("- Enter id: ", false);
+            getline(cin, id);
+            person = find_person(id, list_people);
+            if (person.size() <= 0)
+            {
+                cout << "- There are no person with id: " << id << endl;
+            }
+        }
+        // Delete
+        for (size_t i = 0; i < list_people.size(); i++)
+        {
+            if (id == list_people.at(i).at(1))
+            {
+                list_people.erase(list_people.begin() + i);
+            }
+        }
+
+        display_text("- Deleting successfully. Press 1 to view new list", true);
+    }
 }
-void tuturial_UI(){
-    display_text("tuturial", true);
+void tutorial_UI(){
+    display_text("tutorial", true);
 }
 void support_UI(){
     display_text("support", true);
@@ -160,22 +235,6 @@ void display_text(const string &text, bool isEndl){
     }
 }
 
-void display_list(const vector<vector<string>> &list_people){
-    if (list_people.size() <= 0)
-    {
-        display_text("- Your list is empty. Please create and add a person.", true);
-    } else {
-        for (size_t i = 0; i < list_people.size(); i++)
-        {
-            cout << "-     + Name: ";
-            cout << list_people.at(i).at(0);
-            cout << " (ID: ";
-            cout << list_people.at(i).at(1) << ")";
-            cout << endl;
-        }
-    }
-}
-
 void capitalize_firstLetter(string &name){
     for (size_t i = 0; i < name.length(); i++)
     {
@@ -195,6 +254,19 @@ void generate_id(string &id, const string &name, const vector<vector<string>> &l
         }
     } 
     id = id + to_string(list_people.size() + 1);
+}
+
+vector <string>find_person(const string &id, const vector<vector<string>> &list_people){
+    vector<string> person = {};
+    for (size_t i = 0; i < list_people.size(); i++)
+    {
+        if (id == list_people.at(i).at(1))
+        {
+            person.push_back(list_people.at(i).at(0));
+            person.push_back(list_people.at(i).at(1));
+        }
+    }
+    return person;
 }
 
 /*
