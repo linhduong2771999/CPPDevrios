@@ -1,28 +1,28 @@
 /* INTRODUCTION
     ⁂⁜※⁑⁇⁈
     
-                                    **********************************************
-                                    *                                            * 
-                                    *                                            *
-                                    *                      *                     *
-                                    *                     * *                    *  
-                                    *                    *   *                   *   
-                                    *             * * * *     * * * *            *  
-                                    *               *             *              *   
-                                    *                 *         *                *   
-                                    *                *   *   *   *               *   
-                                    *               *  *       *  *              *
-                                    *              **             **             *
-                                    *                                            *                   
-                                    *                                            *
-                                    **********************************************
+                                    *******************************************************
+                                    *                                                     * 
+                                    *                                                     *
+                                    *                          *                          *
+                                    *                         * *                         *  
+                                    *                        *   *                        *   
+                                    *                 * * * *     * * * *                 *  
+                                    *                   *             *                   *   
+                                    *                     *         *                     *   
+                                    *                    *   *   *   *                    *   
+                                    *                   *  *       *  *                   *
+                                    *                  **             **                  *
+                                    *                                                     *                   
+                                    *                                                     *
+                                    *******************************************************
     
     ⁈ Preface
         ⁂ On August 26, 2024, the Task Control or Center of Operation (TCCO) decided to start a new C++ project replacing 
     the former one, which named "Hoc hanh nghiem tuc" was created on September 25, 2022 (according to the "New Laptop" 
     date). The new official name of the project is "CPPDevrios" (meaning Development + Kyrios).
 
-    ⁇ Why to create
+    ⁇ Why to create?
         ⁂ CPPDevrios aims to establish an impeccable and sustainable curriculum for learning and mastering C++ programming 
     language for beginners without any interruptions. In the past, many programmers detected a lot of mistakes and 
     errors from the previous project that had been crucial causes for the delay of learning c++, both internal and 
@@ -41,7 +41,14 @@
     studying about website design and pursue other careers. With so many choices and options such as backend, software engineer, 
     UX-UI design, the TCCO decided to choose the major according to the predecessors' passion, which is game development (C++).
 
+    
+    　Meow~~ ∧＿∧　　☆         ∧＿∧　   ~~ngoeewww                                      　          
+    　　　 （´・ω・｀∩          ∩・ω・｀）
+ ☆ ♪　(( ⊂　　　,ﾉ           |　　  _⊃ )) ♪ ☆
+    ♪ (( ⊂＿　.ﾉ           ((　　 _⊃　) ♪ ☆
+    　　　 　 (ノ              \_) ⌒
 */
 // Update 1.0: August 26, 2024
-// Update 2.0: November 30, 2024
+// Update 2.0: 6:40 pm November 30, 2024
+// Update 2.1: 11:57 pm November 30, 2024
 
