@@ -49,7 +49,7 @@ using namespace std;
     -parameters in declaration and ignore all the parameters in the definition function.
     ----------
 
-     ----------
+    ----------
     - Inline function
     - Link: https://www.geeksforgeeks.org/inline-functions-cpp/ (for easy reading)
     -
@@ -145,10 +145,3 @@ void display_array(const int arr[], size_t size){
 void display_ref_numbers(int &num){
     cout << num << endl;
 }
-/*
-
-definition vs declaration function
-stack vs heap
-optimization strategies
-recursive
-*/
