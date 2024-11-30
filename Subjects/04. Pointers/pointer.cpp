@@ -25,9 +25,34 @@ using namespace std;
     - + const int *const score_ptr = {&score} (a constant score pointer that point to constant int value)
     --------
 
-     --------
+    --------
     - Passing pointer to function   
-    -
+    --------
+
+    --------
+    - Pitfalls   
+    - + Uninitialized pointer
+    - + Dangling pointer
+    - + Checking if "new" failed
+    - + Leaking memory
+    --------
+    
+    --------
+    - Reference vs Pointer
+    - Reference:
+    - + An alias for a variable
+    - + Always initialized with a variable and cannot be null   
+    --------
+
+    --------
+    - r-value & l-value
+    - l-value: 
+    - + Have name and addressable  
+    - + Modifiable if they are not constants
+    - r-value:
+    - + Non-addressable and non-assignable
+    - + A literal numbers, texts, strings...
+    - + A temporary which is intended to be non-modifiable
     --------
 */
 
