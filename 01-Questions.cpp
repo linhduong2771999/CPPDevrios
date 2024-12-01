@@ -12,5 +12,12 @@
     stack vs heap
     optimization strategies
     recursive
+    user-defined
+
+    --OOP
+    how compiler knows cpp file when i only include header file
+    How a compiler knows from a header file, that a source file exists somewhere?
 
 */
+
+// Total modification: 2
