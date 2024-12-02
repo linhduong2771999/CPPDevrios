@@ -2,6 +2,105 @@
 // Typically: common errors and bugs, how some specified function works...
 // We separate into different files means specific knowledge are found at that lesson 
 
+
+/************ Operators */
+/*
+    --------
+    - + Pre-decremented (--num): the value of num is decremented first, then its value is used in an
+    -expression.
+    - + Post-decremented (num--): the value of num is used first, then its value is decremented in an
+    -expression.
+    -
+    --------
+*/
+
+/************ Linking & Compiling */
+/* (zoom out for easy reading)
+    Great question! When you have files like main.cpp, account.cpp, and account.h, and you include account.h 
+    in main.cpp, the compiler doesn't directly "know" about the existence of account.cpp when it processes 
+    main.cpp. Here's how the build process works and how the compiler and linker handle it:
+
+    1. Role of Header Files
+    When you include account.h in main.cpp, you're telling the compiler that main.cpp will use the functions, 
+    classes, or variables declared in account.h. The header file contains declarations (like function prototypes 
+    or class definitions), which allows the compiler to check for proper usage in the source file (main.cpp).
+
+    For example:
+
+    cpp
+    Copy code
+    // account.h
+    #ifndef ACCOUNT_H
+    #define ACCOUNT_H
+
+    class Account {
+    public:
+        void deposit(double amount);
+        void withdraw(double amount);
+    private:
+        double balance;
+    };
+
+    #endif
+    In main.cpp, you include account.h, and the compiler sees that Account is a class with certain functions, 
+    but it doesn't know how these functions are implemented yet:
+
+    cpp
+    Copy code
+    // main.cpp
+    #include "account.h"
+
+    int main() {
+        Account myAccount;
+        myAccount.deposit(100.0);
+        myAccount.withdraw(50.0);
+        return 0;
+    }
+    2. Compilation Process
+    At this stage, the compiler only cares about the declarations in the header file. The compiler will check if 
+    main.cpp correctly uses the Account class, and whether the functions deposit and withdraw are called properly. 
+    However, it doesn't care yet about their implementations.
+
+    The actual implementation of the functions (the code for deposit, withdraw, etc.) is found in account.cpp. The 
+    compiler doesn't automatically know about account.cpp, because it only processes one source file at a time.
+
+    3. Linking Process
+    The key part is the linking step, which happens after all source files are compiled. The linker is responsible 
+    for combining all the compiled object files (e.g., main.o, account.o) into a final executable.
+
+    Here’s what happens:
+
+    The compiler compiles main.cpp into an object file (main.o) using the declarations from account.h.
+    The compiler also compiles account.cpp into another object file (account.o), which contains the definitions 
+    (implementations) of the Account class functions.
+    The linker then combines main.o and account.o to resolve any references to functions or variables. It links 
+    the call to myAccount.deposit(100.0) in main.cpp to the actual definition of deposit in account.cpp.
+    4. How the Linker Finds account.cpp
+    In practice, the linker finds account.cpp because it is included in the build process. When you compile your 
+    program (for example, using g++ or through a build system like make or CMake), you explicitly tell the compiler
+    and linker which .cpp files to include.
+
+    For example, when using a command like:
+
+    bash
+    Copy code
+    g++ main.cpp account.cpp -o myProgram
+    The compiler compiles main.cpp and account.cpp into object files (main.o and account.o).
+    The linker then combines the object files into the final executable myProgram.
+    If you're using a build system like make, the system will handle this for you by specifying which source files 
+    to compile and link.
+
+    In summary:
+    The compiler knows about account.cpp because it's included in the build process (compiled separately and linked later).
+    The linker resolves the references between the declarations in account.h (included in main.cpp) and the implementations 
+    in account.cpp.
+    You don't need to include account.cpp in main.cpp because account.h provides the necessary declarations, and the actual 
+    linking happens during the linking stage when you compile and link both main.cpp and account.cpp.
+    This separation ensures that your code is modular and can be compiled in parts, making the build process more efficient
+    and manageable.
+
+*/
+
 /************ Arrays & Vectors */
 /*
     If you use the [] to access vector's element. Vector will not do bound checking. 
@@ -112,3 +211,33 @@
     - + A temporary which is intended to be non-modifiable
     --------
 */
+
+/************ OOP */
+/*
+    --------
+    - Destructor, Copy Constructor, Copy Assignment Operator
+    - There are two different way to do Deep Copy:
+    -   + In Copy Constructor: Use for initialization object
+    -   + In Copy Assignment Operator: Use when assign one already exited object to another object
+    -
+    --------
+
+    --------
+    - Rule of three
+    -   + This rule basically states that if a class defines one (or more) of the following (destructor, 
+    -copy constructor, copy assignment operator), it should explicitly define all three. 
+    -   + link for more read: https://www.geeksforgeeks.org/rule-of-three-in-cpp/
+    - 
+    - Rule of Five
+    -   + This rule ensure that the memory is properly handled i.e. memory allocation and deallocation 
+    -is done properly and also resource management
+    -   +  link for more read: https://www.geeksforgeeks.org/rule-of-five-in-cpp/
+    --------
+*/
+
+
+
+/*
+    Update 1: 6:27 pm December 2, 2024
+        + Add OOP, Operator, Link & Compiling
+*/ 
