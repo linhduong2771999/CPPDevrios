@@ -17,7 +17,13 @@
     --OOP
     how compiler knows cpp file when i only include header file
     How a compiler knows from a header file, that a source file exists somewhere?
+    Move Constructor
+    Move semantics
+    --num;
+    num--;
+    why static member class cannot be const c++
+    friend
 
 */
 
-// Total modification: 2
+// Total modification: 3
