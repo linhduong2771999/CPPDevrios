@@ -15,7 +15,7 @@ class Inventory{
 
     public:
     void display(){
-        cout << "hello" << endl;
+        Product product;
         // for (size_t i = 0; i < inventory.size(); i++)
         // {
         //     cout << inventory.at(i).name << endl;

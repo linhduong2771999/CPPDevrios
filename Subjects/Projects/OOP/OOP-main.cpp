@@ -10,7 +10,6 @@ using namespace std;
 
 int main(){
     Inventory inven;
-    cout << "hello" << endl;
     inven.display();
 
     return 0;
