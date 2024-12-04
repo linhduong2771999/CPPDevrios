@@ -12,6 +12,20 @@
     -expression.
     -
     --------
+
+    --------
+    - Narrowing Conversion & Braces Initialization
+    - + A narrowing conversion happens when you try to convert a larger type to a smaller type (or a 
+    -type with less precision), and the value might not fit in the destination type
+    -   - double d = 3.14;
+    -   - int i = d; // Narrowing conversion: loss of decimal part
+    -
+    - + Some bad results of Narrowing Conversion:
+    -   - Data Loss
+    -   - Harder to debug: When narrowing conversions are allowed, it can be difficult to detect 
+    -issues with data loss until runtime. This can lead to bugs that are hard to trace.
+    -
+    --------
 */
 
 /************ Linking & Compiling */
@@ -164,6 +178,13 @@
     - use cin.ignore ( std::numeric_limits<std::streamsize>::max(), '\n' ); from the <limits> library
     --------
 
+    --------
+    - link for more read: https://en.cppreference.com/w/cpp/language/string_literal
+    - String literals can be used to initialize character arrays. If an array is initialized like char 
+    -str[] = "foo";, str will contain a copy of the string "foo".
+    -
+    --------
+
 */
 
 /************ Function */
@@ -240,4 +261,10 @@
 /*
     Update 1: 6:27 pm December 2, 2024
         + Add OOP, Operator, Link & Compiling
+*/ 
+
+/*
+    Update 1.1: 7:11 pm December 4, 2024
+        + Update Strings & Characters: string literal vs char arr[]
+        + Update Operator: Narrowing Conversion
 */ 
