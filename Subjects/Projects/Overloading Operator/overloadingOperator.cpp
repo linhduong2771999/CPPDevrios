@@ -13,8 +13,6 @@ using namespace std;
     >
     +
     +=
-    * (update to three lv)
-    *=
     ++
     --
     >>
@@ -30,18 +28,35 @@ using namespace std;
 
 
 int main(){
-    Champion jinx {"jinx", 1000, 1};
-    Champion vayne {"vayne", 1200, 1};
-    Champion jhin {"jhin", 1100, 1};
+    Champion champ_1 {"jinx", 900, 0};
+    // -champ_1;
+    // champ_1.display_info();
+    Champion champ_2 {"vayne", 1200, 1};
+    // cout << (champ_2 == champ_1) << endl; 
+    // cout << (champ_2 != champ_1) << endl; 
+    // cout << (champ_2 > champ_1) << endl; 
+    // cout << (champ_2 < champ_1) << endl; 
+    Champion champ_3 {"jhin", 2100, 2};
+    Champion champ_4 {"caitlyn", 3400, 3};
+    Champion champ_5 {"twitch", 4170, 4};
+    Champion champ_6 {"kogmaw", 5250, 5};
+    // champ_1.display_info();
+    // champ_2.display_info();
+    // champ_3.display_info();
+    // champ_4.display_info();
+    // champ_5.display_info();
+    // champ_6.display_info();
+    // champ_1 = champ_1 + champ_2;
+    champ_6 = champ_5--;
+    champ_5.display_info();
+    champ_6.display_info();
 
-    jhin = jinx = vayne;
-    jinx.display_info();
-    vayne.display_info();
-    jhin.display_info();
+    cin >> champ_1;
+    cout << champ_1 << endl;
+    // -champ_3;
 
-    Champion varus { move(Champion{"varus", 3000, 2}) };
-    // -varus;
-    varus.display_info();
+    
+    
 
     return 0;
 }
