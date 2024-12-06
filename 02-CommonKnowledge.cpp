@@ -231,6 +231,24 @@
     - + A literal numbers, texts, strings...
     - + A temporary which is intended to be non-modifiable
     --------
+
+    Return Value Optimization (RVO) & Copy Elision
+    --------
+    - When the compiler applies RVO, it constructs the returned object directly in the memory location of 
+    the receiving variable (e.g., varus). This eliminates the need for:
+
+    + Creating a temporary object for the return value.
+    + Moving the temporary object to the target.
+    - By skipping these steps, the compiler avoids both the construction and the move, leading to fewer 
+    operations and faster execution.
+
+    Without RVO:
+    + Temporary Champion("Varus", 3000, 2) is created.
+    + Champion::Champion(Champion &&) (move constructor) is called to transfer the temporary to varus.
+    + Temporary is destroyed.
+    With RVO:
+    + Champion("Varus", 3000, 2) is constructed directly into varus's memory.
+    + No move or temporary object destruction is needed.
 */
 
 /************ OOP */
@@ -267,4 +285,9 @@
     Update 1.1: 7:11 pm December 4, 2024
         + Update Strings & Characters: string literal vs char arr[]
         + Update Operator: Narrowing Conversion
+*/ 
+
+/*
+    Update 1.2: 2:30 pm December 6, 2024
+        + Update Pointers: RVO & Copy Elision
 */ 
