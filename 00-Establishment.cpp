@@ -1,21 +1,23 @@
 /* INTRODUCTION
     ⁂⁜※⁑⁇⁈
     
-                                    *******************************************************
-                                    *                                                     * 
-                                    *                                                     *
-                                    *                          *                          *
-                                    *                         * *                         *  
-                                    *                        *   *                        *   
-                                    *                 * * * *     * * * *                 *  
-                                    *                   *             *                   *   
-                                    *                     *         *                     *   
-                                    *                    *   *   *   *                    *   
-                                    *                   *  *       *  *                   *
-                                    *                  **             **                  *
-                                    *                                                     *                   
-                                    *                                                     *
-                                    *******************************************************
+                                    ***************************************************************
+                                    *                                                             *  
+                                    *                                                             * 
+                                    *                                                             *
+                                    *                              *                              *
+                                    *                             * *                             *  
+                                    *                            *   *                            *   
+                                    *                     * * * *     * * * *                     *  
+                                    *                       *             *                       *   
+                                    *                         *         *                         *   
+                                    *                        *   *   *   *                        *   
+                                    *                       *  *       *  *                       *
+                                    *                      **             **                      *
+                                    *                                                             *                   
+                                    *                                                             *  
+                                    *                                                             *
+                                    ***************************************************************
     
     ⁈ Preface
         ⁂ On August 26, 2024, the Task Control or Center of Operation (TCCO) decided to start a new C++ project replacing 
@@ -44,11 +46,52 @@
     
     　Meow~~ ∧＿∧　　☆         ∧＿∧　   ~~ngoeewww                                      　          
     　　　 （´・ω・｀∩          ∩・ω・｀）
- ☆ ♪　(( ⊂　　　,ﾉ           |　　  _⊃ )) ♪ ☆
+ ☆ ♪　 ( ⊂　　　,ﾉ           |　　  _⊃ )) ♪ ☆
     ♪ (( ⊂＿　.ﾉ           ((　　 _⊃　) ♪ ☆
     　　　 　 (ノ              \_) ⌒
-*/
-// Update 1.0: August 26, 2024
-// Update 2.0: 6:40 pm November 30, 2024
-// Update 2.1: 11:57 pm November 30, 2024
 
+    ⁇ What is the purpose?
+        ⁂ When the plan to chase web design falls to failure, TCCO redirected their predecessors to game development with the 
+    core goal of gaining a stable position in the competitive system of jobs in society (of course, the important prerequisite 
+    must acquire high profits and a favorable work environment). The initial "core goal" has led a number of important purposes
+    that following it were also proposed in order to solidify the career path of its predecessors more securely, firmly, and 
+    sustainably.
+        "Maintaining a stable standing" has been pointed out the term "passion" - The enthusiasm for online and offline game 
+    design of the predecessors is extremely strong, it has long been ingrained in their souls since childhood and persists until 
+    now. Work accompanied by passion will infuse excitement in the profession, boost productivity while working, and keep the 
+    mental mind steady for upcoming challenges in the future.
+        "Extremely high self-independent opportunities" - the game design industry has long demonstrated that many individuals 
+    have been achieved great success in terms of profits and standing within society's competitive structure. With confidence 
+    in professional knowledge and clear plans provided by TCCO for their predecessors, they are sure that their path will yield 
+    many pleasant fruits.
+                                       __      _
+         /\_/\  ~~mm             ((  o'')}____//
+        ( o.o )                     `_/      )
+        > ^ <                       (_(_/-(_/
+*/
+
+
+//  Update 1.0: August 26, 2024
+
+/*
+    Update 2.0: 6:40 pm November 30, 2024
+        + WNC - Motivation behind
+        + RWC - Why to create
+*/ 
+/*
+    Update 2.1: 11:57 pm November 30, 2024
+        + RWC - Why to create 
+        + DNI - Vietnam flag, two dancing cat
+*/ 
+/*
+    Update 3: 8:15 pm December 8, 2024
+        + WNC - What is the purpose
+        + DNI - Cat & Dog
+        + RDI - Vietnam flag, two dancing cat
+*/ 
+/*
+    re-write content (RWC)
+    write new content (WNC)
+    draw new icon (DNI)
+    re-draw icon (RDI)
+*/
