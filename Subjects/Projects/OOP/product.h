@@ -10,7 +10,7 @@ class Product{
     public:
         string name;
         string description;
-        int serial_number;
+        string serial_number;
         int quantity;
         double price;
         string expired_date;
@@ -21,7 +21,7 @@ class Product{
     Product(
         string name = "Unknown",
         string description = "Empty",
-        int serial_number = 0,
+        string serial_number = "EMpty",
         int quantity = 0,
         double price = 0,
         string expired_date = "None" 

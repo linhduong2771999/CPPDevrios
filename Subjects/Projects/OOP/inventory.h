@@ -10,10 +10,13 @@ using namespace std;
 
 class Inventory{
     private:
+        string type_collection;
         vector <Product> inventory;
-
-
     public:
+        Inventory(string type_collection = "Unknown");
+        // Inventory(const Inventory &source);
+        // Inventory(Inventory &&source);
+
     void display(){
         Product product;
         // for (size_t i = 0; i < inventory.size(); i++)

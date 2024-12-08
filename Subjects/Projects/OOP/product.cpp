@@ -3,7 +3,7 @@
 Product::Product(
     string name, 
     string description, 
-    int serial_number, 
+    string serial_number, 
     int quantity,
     double price,
     string expired_date
