@@ -12,7 +12,7 @@
     stack vs heap
     optimization strategies
     recursive
-    user-defined  
+    // user-defined  
 
     --OOP
     // how compiler knows cpp file when i only include header file
@@ -22,8 +22,17 @@
     // --num;
     // num--;
     // why static member class cannot be const c++
-    friend
+    // friend
 
+    --Inheritance
+    more about Public, Private & Protected
+    why base constructor is called first, then derived constructor whenever derived object is create
+    why base constructor is call wherever derived object create
+    why derived object need a base part
+    slice
+    so what is i have one base class and one derived class that has the same name member attributes,
+    static biding
+    
 */
 
-// Total modification: 4
+// Total modification: 5
