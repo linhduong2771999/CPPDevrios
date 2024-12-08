@@ -31,7 +31,7 @@
     why derived object need a base part
     slice
     so what is i have one base class and one derived class that has the same name member attributes,
-    static biding
+    static biding 
     
 */
 
