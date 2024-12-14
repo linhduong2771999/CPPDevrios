@@ -29,9 +29,6 @@ using namespace std;
     - + When a base class pointer is used to delete a derived class object, the destructor of the 
     -derived class won't be called unless the base class destructor is marked as virtual.
     - + Base* obj = new Derived(); delete obj; // Only Base destructor will be called
-    - + Indicates that a member function is intended to be overridden by derived classes.
-    - + Allows runtime polymorphism, enabling derived class functions to be called through base 
-    -class pointers or references.
     -
     - + Should we make all destructors virtual?: https://www.learncpp.com/cpp-tutorial/virtual-destructors-virtual-assignment-and-overriding-virtualization/
     --------
@@ -44,6 +41,9 @@ using namespace std;
     -class.
     - + Use for avoiding making mistakes when overiding function
     -
+    - + Indicates that a member function is intended to be overridden by derived classes.
+    - + Allows runtime polymorphism, enabling derived class functions to be called through base 
+    -class pointers or references.
     --------
 
     --------
@@ -70,8 +70,9 @@ using namespace std;
 
     --------
     - Abstract Classes as Interface
-    -
-    -
+    - Interface: An interface class is a class that has no member variables, and where all of the 
+    -functions are pure virtual
+    - 
     --------
 */
 
@@ -187,10 +188,3 @@ int main(){
     return 0;
 }
 
-
-/*
-    why c++ has to separate compile and run time to executed
-    if Account is a base, Saving is a derived, and Trust is a derived from saving, does trust has two base part
-    specifier & keywords
-    early biding & late binding
-*/
