@@ -78,30 +78,47 @@ using namespace std;
 
 class Base {
     public:
+        Base(){
+           cout << "Base Constructor" << endl; 
+        }
         virtual void display_info() const {
             cout << "hello from base" << endl;
         }
         virtual void say_hello() const{
             cout << "say hello from base" << endl;
         }
+        virtual void print(ostream &os) const{
+            os << "Base";
+        }
         virtual ~Base(){
             cout << "Base Destructor" << endl;
         }
+
 };
 
 class Derived: public Base {
     public:
+        Derived() : Base() {
+            cout << "Derived Constructor" << endl;
+        }
         virtual void display_info() const {
             cout << "hello from derived" << endl;
         }
          void say_hello() const override{
             cout << "say hello from derived" << endl;
         }
+        virtual void print(ostream &os) const{
+            os << "Derived";
+        }
         virtual ~Derived(){
             cout << "Derived Destructor" << endl;
         }
 };
 
+ostream &operator<<(ostream &os, const Base &obj){
+    obj.print(os);
+    return os;
+}
 void greetings(const Base &obj){
     // obj.display_info();
     obj.say_hello();
@@ -157,7 +174,13 @@ class Circle: public Close_Shape {
 
 
 int main(){
-    // Derived a;
+    Derived de;
+    Base bae;
+    Base &ba {de};
+    cout << de << endl;
+    cout << ba << endl;
+    cout << bae << endl;
+
     // greetings(a);
 
     // Base *ptr = new Derived();
@@ -184,6 +207,7 @@ int main(){
 
 
     delete a;
+
 
     return 0;
 }
