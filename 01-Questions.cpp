@@ -32,6 +32,15 @@
     slice
     so what is i have one base class and one derived class that has the same name member attributes,
     static biding 
+
+    Animal* animals[] = { &myDog, &myCat };
+    i have a question, a pointer point to base class Animal that has memory two derived class. how thats possible
+    why c++ has to separate compile and run time to executed
+    if Account is a base, Saving is a derived, and Trust is a derived from saving, does trust has two base part
+    specifier & keywords
+    early biding & late binding
+    interface
+    virtual ~Animal() = default;
     
 */
 
