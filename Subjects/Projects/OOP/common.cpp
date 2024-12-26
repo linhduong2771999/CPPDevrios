@@ -1,6 +1,6 @@
 #include "common.h"
 
-// Displaying interface
+// For displaying interface
 void home(){
     display_banner("Home");
     display_text("1. Home", true);   
@@ -8,7 +8,11 @@ void home(){
     display_text("3. Login", true);
 }
 
-// Building interface
+void guest_shopping(){
+    display_banner();
+}
+
+// for constructing interface
 void cut_line(){
     cout << endl;
     cout << endl;

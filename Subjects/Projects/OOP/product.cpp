@@ -14,4 +14,4 @@ Product::Product(
  quantity {quantity},
  price {price},
  expired_date {expired_date}
-{ cout << "Constructor Called" << endl; }
+{  }

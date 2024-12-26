@@ -10,10 +10,11 @@ using namespace std;
 // helpers
  
 
-// Displaying interface
+// For displaying interface
 void home();
+void guest_shopping();
 
-// Building interface
+// For constructing interface
 void cut_line();
 void clear_buffer();
 void display_text(const string &text, bool isEndl);
