@@ -21,7 +21,7 @@ class Product{
     Product(
         string name = "Unknown",
         string description = "Empty",
-        string serial_number = "EMpty",
+        string serial_number = "Empty",
         int quantity = 0,
         double price = 0,
         string expired_date = "None" 

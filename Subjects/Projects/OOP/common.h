@@ -4,11 +4,12 @@
 #include <string>
 #include <vector>
 #include <limits>
+#include <cctype>
 
 using namespace std;
 
 // helpers
- 
+bool isValidInteger(const string &str);
 
 // For displaying interface
 void home();

@@ -27,14 +27,12 @@ int main(){
         case 2:
             clear_buffer();
             cut_line();
-            display_banner("Login");
-            display_text("Login", true);
+            guest_shopping();
             break;
         case 3:
             clear_buffer();
             cut_line();
-            display_banner("Inventory");
-            display_text("Inventory", true);
+            display_banner("Login");
             break;
         default:
             break;
