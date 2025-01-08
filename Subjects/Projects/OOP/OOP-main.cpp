@@ -14,7 +14,7 @@ const vector<Product> inven_data = {
 const string password = "linhduongnguyen277";
 
 
-int main(){
+int main(){ 
     Inventory inven(inven_data);
     int num = -1;
     home();

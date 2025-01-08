@@ -63,7 +63,7 @@ void Inventory::update_shopping_cart(const string &buying_input, const int &quan
             {   
                 // handle the quantity in the inventory
                 if (inventory.at(i).quantity == 0)
-                {
+                { 
                     display_text("# The product is out of stock", true);
                 } else if (quantity_input <= inventory.at(i).quantity)
                 {

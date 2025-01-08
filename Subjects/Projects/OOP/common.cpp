@@ -49,7 +49,7 @@ void guest_shopping(Inventory &inven)
                 display_text("-> Quantity: ", false);
                 getline(cin, quantity_input);
                 if (isValidInteger(quantity_input))
-                {
+                { 
                     quantity_value = stoi(quantity_input);
                     isValidQuantity = true;
                 }

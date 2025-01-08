@@ -15,7 +15,7 @@ class Product{
         double price;
         string expired_date;
 
-    public:
+    public: 
 
     // Default Constructor
     Product(

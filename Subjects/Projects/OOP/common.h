@@ -12,7 +12,7 @@ using namespace std;
 
 // helpers
 bool isValidInteger(const string &str);
-
+ 
 // For displaying interface
 void home();
 void guest_shopping(Inventory &inven);

@@ -15,7 +15,7 @@ class Inventory{
         const string type_collection;
         vector <Product> inventory;
         vector <Product> shopping_cart;
-    public:
+    public: 
         Inventory(vector<Product> inven_data);
         // Inventory(const Inventory &source);
         // Inventory(Inventory &&source);
