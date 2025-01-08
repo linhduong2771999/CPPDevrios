@@ -24,8 +24,7 @@ void home(){
     display_text("3. Login", true);
 }
 
-void guest_shopping(){
-    Inventory inven;
+void guest_shopping(Inventory &inven){
     string buying_input;
     string quantity_input;
     int quantity_value = 0;
@@ -36,7 +35,7 @@ void guest_shopping(){
 
     while (buying_input != "e")
     {
-        display_text("-> What you want to buy(name or serial number, press e to exit): ", false);
+        display_text("-> What you want to buy(name or serial number, press b for payment, e to exit): ", false);
         getline(cin, buying_input);
         if (buying_input != "e")
         {
@@ -51,12 +50,10 @@ void guest_shopping(){
                     isValidQuantity = true;
                 }
             }
+            inven.update_shopping_cart(buying_input, quantity_value, true);
+            inven.get_inventory("user");
         }
-        inven.update_shopping_cart(buying_input, quantity_value, true);
     }
-    
-    inven.get_inventory("user");
-    
 }
 
 // for constructing interface

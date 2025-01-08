@@ -5,14 +5,9 @@
 #include <vector>
 
 #include "product.h"
-#include "common.h"
 
 using namespace std;
 
-const vector<Product> inven_data = {
-    {"name", "des", "em", 1, 12, "1-11"},
-    {"nam", "des", "em", 1, 12, "1-11"}
-};
 // const vector<Product> inven_data = {}
 
 class Inventory{
@@ -21,7 +16,7 @@ class Inventory{
         vector <Product> inventory;
         vector <Product> shopping_cart;
     public:
-        Inventory(string type_collection = "Unknown");
+        Inventory(vector<Product> inven_data);
         // Inventory(const Inventory &source);
         // Inventory(Inventory &&source);
         void get_inventory(const string &type_collection);

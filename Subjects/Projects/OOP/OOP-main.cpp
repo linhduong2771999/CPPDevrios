@@ -1,12 +1,20 @@
 #include <iostream>
 
-#include "common.h"
 #include "inventory.h"
+#include "common.h"
 
 using namespace std;
 
+const vector<Product> inven_data = {
+    {"Lettuce", "Lettuce is an annual plant of the family Asteraceae mostly grown as a leaf vegetable", "lec23", 20, 2.3, "5 days from now"},
+    {"Beef", "Meat from cattle, and is a type of red meat", "mea77", 5, 7.7, "2 days from now"},
+    {"Metal Spoon", "Used for eating, stirring, and serving food", "mesp12", 7, 12, "Unknown"},
+    {"T-shirt", " Sune Slickster T-Shirt", "ts250", 2, 250, "Unknown"},
+
+};
 
 int main(){
+    Inventory inven(inven_data);
     int num = -1;
     home();
     while (num != 0)
@@ -27,7 +35,7 @@ int main(){
         case 2:
             clear_buffer();
             cut_line();
-            guest_shopping();
+            guest_shopping(inven);
             break;
         case 3:
             clear_buffer();
