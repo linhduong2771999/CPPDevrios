@@ -16,6 +16,7 @@ bool isValidInteger(const string &str);
 // For displaying interface
 void home();
 void guest_shopping(Inventory &inven);
+void payment(const string &credit_input, const Inventory &inven);
 
 // For constructing interface
 void cut_line();

@@ -134,7 +134,7 @@ class Person{
     // Copy Constructor
     Person(const Person &source);
     // Move Constructor
-    Person(Person &&source) noexcept ;
+    Person(Person &&source) noexcept;
     ~Person();
 
 };
@@ -193,6 +193,28 @@ Person::~Person(){
     cout << "Destructor of: " << name << endl;
 }
 
+class Player{
+    private:
+        int health;
+
+    public:
+    Player(int health = 0);
+    Player(const Player &source);
+    Player(Player &&source);
+
+    ~Player();
+};
+
+Player::Player(int health_val)
+: health{health_val} {}
+
+Player::Player(const Player &source)
+: health {source.health} {
+}
+
+Player::Player(Player &&source)
+: health {source.health} { source.health = 0; }
+
 int main(){
 
     // Person duong;
@@ -216,14 +238,14 @@ int main(){
     // nguyen.display_ptr();
 
     // Testing deep copy constructor
-    const Person nguyen("Nguyen Linh Duong", 25, 1.7);
-    
-    // nguyen.display_ptr();
-    Person dinh(nguyen);
-    // nguyen.display_ptr();
-    Person::display_static();
+    // const Person nguyen("Nguyen Linh Duong", 25, 1.7);
+    // Person dinh;
+    // Person::display_static();
 
-    // nguyen = Person();
+    Player nguyen(5);
+    Player dinh(1);
+
+    // dinh = nguyen;
     
     return 0;
 }

@@ -19,9 +19,9 @@ class Inventory{
         Inventory(vector<Product> inven_data);
         // Inventory(const Inventory &source);
         // Inventory(Inventory &&source);
-        void get_inventory(const string &type_collection);
+        void get_inventory(const string &type_collection) const;
         void update_shopping_cart(const string &buying_input, const int &quantity_input, const bool &actionType);
-      
+        void clear_inventory(const string &type_collection);
 };
 
 #endif

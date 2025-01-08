@@ -10,8 +10,9 @@ const vector<Product> inven_data = {
     {"Beef", "Meat from cattle, and is a type of red meat", "mea77", 5, 7.7, "2 days from now"},
     {"Metal Spoon", "Used for eating, stirring, and serving food", "mesp12", 7, 12, "Unknown"},
     {"T-shirt", " Sune Slickster T-Shirt", "ts250", 2, 250, "Unknown"},
-
 };
+const string password = "linhduongnguyen277";
+
 
 int main(){
     Inventory inven(inven_data);

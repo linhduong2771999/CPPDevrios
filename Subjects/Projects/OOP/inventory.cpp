@@ -6,7 +6,7 @@ Inventory::Inventory(vector<Product> inven_data)
     cout << "Inventory Constructor" << endl;
 }
 
-void Inventory::get_inventory(const string &type_collection){
+void Inventory::get_inventory(const string &type_collection) const{
     if (type_collection == "user")
     {
         if (shopping_cart.size() <= 0)
@@ -27,7 +27,7 @@ void Inventory::get_inventory(const string &type_collection){
     } else if (type_collection == "admin"){
         if (inventory.size() <= 0)
         {
-            display_text("- Our inventory is currently empty. Please comback later.", true);
+            display_text("- Our inventory is currently empty. Please comeback later.", true);
         } else {
             display_text("- Shopping list: ", true);
             for (size_t i = 0; i < inventory.size(); i++)
@@ -68,10 +68,10 @@ void Inventory::update_shopping_cart(const string &buying_input, const int &quan
                 } else if (quantity_input <= inventory.at(i).quantity)
                 {
                     inventory.at(i).quantity -= quantity_input; 
+                    shopping_cart.push_back(temp_obj);
                 } else {
                     display_text("# The quantity in stock is not enough", true);
                 }   
-                shopping_cart.push_back(temp_obj);
             } else {
                 shopping_cart.erase(shopping_cart.begin() + i);
             }
@@ -81,6 +81,28 @@ void Inventory::update_shopping_cart(const string &buying_input, const int &quan
     if (!isFound)
     {
         display_text("# Invalid product name or serial number.", true);
+    }
+    
+}
+
+void Inventory::clear_inventory(const string &type_collection){
+    if (type_collection == "user")
+    {   
+        if (shopping_cart.size() <= 0)
+        {
+            display_text("- Your cart is currently empty. Please buy something.", true);
+        } else {
+         shopping_cart.clear();
+        }
+    } else if (type_collection == "admin") {
+        if (inventory.size() <= 0)
+        {
+            display_text("- Our inventory is currently empty. Please comeback later.", true);
+        } else {
+            inventory.clear();
+        }
+    } else {
+        display_text("-> Invalid user or admin. Please try another login.", true);
     }
     
 }
