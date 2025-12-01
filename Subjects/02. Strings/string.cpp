@@ -18,7 +18,7 @@ using namespace std;
     - + Stored contiguous in memory, fixed in size, terminated by Null Character(\0),
     -can be access as an array.
     - + my_name = "Dng", C-style will not allow assignment like that
-    -because "my_name" represents a location. Use "strcpy" function to assign.
+    -because "my_name" represents a location (it fixed in size and cannot be replaced). Use "strcpy" function to assign.
     - + my_name is called C-style string variable
     - + "Dng" is called C-style string literal
     -
