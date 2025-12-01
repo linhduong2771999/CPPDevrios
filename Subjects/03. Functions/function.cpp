@@ -47,11 +47,13 @@ using namespace std;
     -This ensures clarity and prevents unexpected behaviors.
     - + If you put parameters to definition function but not in the declaration. The compiler will only read
     -parameters in declaration and ignore all the parameters in the definition function.
+    - + Define default parameter at the tail of parameters list.
     ----------
 
     ----------
     - Inline function
     - Link: https://www.geeksforgeeks.org/inline-functions-cpp/ (for easy reading)
+    - Link: https://www.reddit.com/r/cpp/comments/at6w3k/in_terms_of_optimizing_c_code_what_exactly_is/ (for easy example)
     -
     - + If a function is inline, the compiler will places a copy of the specified's code at each point where the 
     -function is called (The function is placed in the code, rather than being actually called).
@@ -65,10 +67,8 @@ using namespace std;
     - called function called.
     -
     - The compiler may not perform inlining in such circumstances as: Looping, static variables, recursive, void function
-    + Usage: frequency of the calls, size of the function
+    - + Usage: frequency of the calls, size of the function
     ----------
-
-
 
 */
 
